@@ -9,7 +9,7 @@ const socketController = (socket) => {
         const id = 123456;
         callback(id);
         //No tengo el this.io entonces el socket hace lo mismo
-        socket.broadcast.emit('enviar-mensaje', payload)
+        socket.broadcast.emit('enviar-mensaje', payload) //.broadcast reciben todos el mensaje menos quien lo envio
     })
 }
 
